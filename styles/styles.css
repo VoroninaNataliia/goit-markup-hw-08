@@ -89,7 +89,7 @@ a,
 
 .links-nav {
     display: inline-block;
-
+    
     padding: 32px 0px;
 
     font-weight: 500;
@@ -98,13 +98,16 @@ a,
     color: var(--main-text-color);
 }
 
-.links-nav.current,
 .links-nav:hover, 
 .links-nav:focus,
 .links-contact:hover,
 .links-contact:focus,
 .links-footer-contact:hover,
 .links-footer-contact:focus {
+    color: var(--brand-color)
+}
+
+.current {
     color: var(--brand-color)
 }
 
@@ -163,6 +166,19 @@ a,
 
 .pages-item:not(:last-child) {
     margin-right: 50px;    
+}
+    
+
+.current::after { 
+    content: " ";
+    display: block;
+
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+
+    background-color: var(--brand-color);
+
 }
 
 .filter-item:hover,
@@ -284,10 +300,11 @@ a,
 
 .advantages-description {
     line-height: 1.71;
-    color: var(--primery-text-color);
+    color: var(--primery-text-color); 
 }
 
 /* section development */
+
 .section.development {
     padding-top: 0px;
 }
@@ -303,7 +320,34 @@ a,
 }
 
 .development-item {
+    position: relative;
     width: 370px;   
+}
+
+.development-box {
+    position: absolute;
+    bottom: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+
+}
+.development-info {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.17;
+
+    color: #FFFFFF;
+    text-transform: uppercase;
 }
 
 /* section team */
@@ -594,6 +638,51 @@ footer {
     background-color: var(--main-background-color);
     color: var(--main-text-color);
 } 
+
+.progect-thumb {
+    position: relative;
+
+    width: 370px;
+    height: 294px;
+}
+
+.progect-thumb::before {
+    content: " ";
+    position: absolute;
+
+    opacity: 0;
+
+    bottom: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+    
+}
+
+.progect-thumb:hover::before {
+    background-color: rgba(33, 150, 243, 0.9);
+    transition-property: transform, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    opacity: 1;
+} 
+
+.project-discription {
+    position: absolute;
+    /*  */
+    opacity: 0px;
+
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 64px 32px;
+   
+    font-size: 18px;
+    line-height: 1.56;
+    color: #FFFFFF;
+}
 
 .project-info {
     padding: 20px 24px;
