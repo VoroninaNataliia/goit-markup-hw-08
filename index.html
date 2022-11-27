@@ -65,6 +65,29 @@
                   <use href="./images/icons.svg#icon-btn-close" class="close-icon"></use>
                 </svg>
               </button>
+              <p>Залиште свої дані, ми вам передзвонимо</p>
+              <form class="client-data">
+                <label class="data-area" for="name">Ім'я</label>
+                <input class="data-item" id="name" type="text" required />
+
+                <label class="data-area" for="tel">Телефон</label>
+                <input class="data-item" id="tel" type="tel" required />
+
+                <label class="data-area" for="email">Пошта</label>
+                <input class="data-item" id="email" type="email" required />
+
+                <label class="data-area">
+                  <textarea class="comments" name="comments" placeholder="Введіть текст">
+                  </textarea>
+                </label>
+
+                <label class="data-area">
+                  <input type="checkbox" required /> Погоджуюся з розсилкою та приймаю
+                  <a fref="#">Умови договору</a>
+                </label>
+
+                <button type="submit" class="send-form">Відправити</button>
+              </form>
             </div>
           </div>
         </div>

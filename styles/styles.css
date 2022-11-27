@@ -304,6 +304,7 @@ a,
 
     width: 528px;
     height: 581px;
+    padding: 40px;
     background-color: #FFFFFF;
     border-radius: 4px;
     
@@ -328,6 +329,54 @@ a,
 
 .close-icon {
     fill: #000000;
+}
+.client-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    
+}
+.data-area {
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 1%;
+    color: var(--primery-text-color);
+}
+
+.data-item {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    margin-bottom: 10px;
+
+}
+
+.comments {
+    overflow: scroll;
+
+    width: 448px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    
+
+    padding: 12px 16px;
+}
+
+.send-form {
+    display: block;
+
+    padding: 10px 52px;
+    border-radius: 4px;
+    border: none;
+    color: var(--additional-text-color);
+    background-color: var(--brand-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
 }
 
 /* section advantages */
