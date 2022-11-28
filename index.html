@@ -65,25 +65,50 @@
                   <use href="./images/icons.svg#icon-btn-close" class="close-icon"></use>
                 </svg>
               </button>
-              <p>Залиште свої дані, ми вам передзвонимо</p>
+              <p class="modal-header">Залиште свої дані, ми вам передзвонимо</p>
               <form class="client-data">
                 <label class="data-area" for="name">Ім'я</label>
-                <input class="data-item" id="name" type="text" required />
+                <span class="item-wrapper">
+                  <input class="data-item" id="name" type="text" required />
+                  <svg class="modal-svg" width="16" height="16">
+                    <use class="modal-icon" href="./images/icons.svg#icon-person-form"></use>
+                  </svg>
+                </span>
 
                 <label class="data-area" for="tel">Телефон</label>
-                <input class="data-item" id="tel" type="tel" required />
+                <span class="item-wrapper">
+                  <input class="data-item" id="tel" type="tel" required />
+                  <svg class="modal-svg" width="16" height="16">
+                    <use class="modal-icon" href="./images/icons.svg#icon-phone-form"></use>
+                  </svg>
+                </span>
 
                 <label class="data-area" for="email">Пошта</label>
-                <input class="data-item" id="email" type="email" required />
+                <span class="item-wrapper">
+                  <input class="data-item" id="email" type="email" required />
+                  <svg class="modal-svg" width="16" height="16">
+                    <use class="modal-icon" href="./images/icons.svg#icon-email-form"></use>
+                  </svg>
+                </span>
+
+                <label class="data-area" for="comments">Коментар</label>
+                <textarea
+                  class="comments"
+                  name="comments"
+                  id="comments"
+                  placeholder="Введіть текст"
+                ></textarea>
 
                 <label class="data-area">
-                  <textarea class="comments" name="comments" placeholder="Введіть текст">
-                  </textarea>
-                </label>
-
-                <label class="data-area">
-                  <input type="checkbox" required /> Погоджуюся з розсилкою та приймаю
-                  <a fref="#">Умови договору</a>
+                  <input
+                    class="checkbox-agreement"
+                    type="checkbox"
+                    width="15"
+                    height="15"
+                    required
+                  />
+                  Погоджуюся з розсилкою та приймаю
+                  <a href="#" class="agreement-link">Умови договору</a>
                 </label>
 
                 <button type="submit" class="send-form">Відправити</button>
