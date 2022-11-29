@@ -255,7 +255,8 @@
             </ul>
           </address>
         </div>
-        <div>
+
+        <div class="footer-social">
           <p class="style-join">приєднуйтесь</p>
           <ul class="social-list">
             <li class="social-item">
@@ -287,6 +288,27 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="footer-submit">
+          <p class="style-join">підпишіться на розсилку</p>
+          <form class="submit-form">
+            <label for="user-email">
+              <input
+                class="submit-input"
+                name="email"
+                id="user-email"
+                type="email"
+                placeholder="E-mail"
+                required
+            /></label>
+            <button class="submit" type="submit">
+              <span class="submit-text">Підписатися</span>
+              <svg class="submit-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>

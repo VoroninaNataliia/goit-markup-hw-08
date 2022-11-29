@@ -391,7 +391,8 @@
             </ul>
           </address>
         </div>
-        <div>
+
+        <div class="footer-social">
           <p class="style-join">приєднуйтесь</p>
           <ul class="social-list">
             <li class="social-item">
@@ -424,6 +425,27 @@
             </li>
           </ul>
         </div>
+
+        <div class="footer-submit">
+          <p class="style-join">підпишіться на розсилку</p>
+          <form class="submit-form">
+            <label for="user-email">
+              <input
+                class="submit-input"
+                name="email"
+                id="user-email"
+                type="email"
+                placeholder="E-mail"
+                required
+            /></label>
+            <button class="submit" type="submit">
+              <span class="submit-text">Підписатися</span>
+              <svg class="submit-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -439,15 +461,29 @@
         <form class="client-data">
           <label class="data-area" for="name">Ім'я</label>
           <span class="item-wrapper">
-            <input class="data-item" id="name" type="text" name="name" required minlength="2" />
+            <input
+              class="data-item"
+              id="name"
+              type="text"
+              name="user-name"
+              required
+              minlength="2"
+            />
             <svg class="modal-svg" width="16" height="16">
               <use href="./images/icons.svg#icon-person-form"></use>
             </svg>
           </span>
 
-          <label class="data-area" for="tel">Телефон</label>
+          <label class="data-area" for="user-tel">Телефон</label>
           <span class="item-wrapper">
-            <input class="data-item" id="tel" type="tel" name="tel" required minlength="10" />
+            <input
+              class="data-item"
+              id="user-tel"
+              type="tel"
+              name="telephone"
+              required
+              minlength="10"
+            />
             <svg class="modal-svg" width="16" height="16">
               <use href="./images/icons.svg#icon-phone-form"></use>
             </svg>
@@ -455,17 +491,17 @@
 
           <label class="data-area" for="email">Пошта</label>
           <span class="item-wrapper">
-            <input class="data-item" id="email" type="email" name="email" required />
+            <input class="data-item" id="email" type="email" name="mail" required />
             <svg class="modal-svg" width="16" height="16">
               <use href="./images/icons.svg#icon-email-form"></use>
             </svg>
           </span>
 
-          <label class="data-area" for="comments" name="comments">Коментар</label>
+          <label class="data-area" for="user-comments">Коментар</label>
           <textarea
             class="comments"
-            name="comments"
-            id="comments"
+            name="comments-area"
+            id="user-comments"
             placeholder="Введіть текст"
           ></textarea>
 
