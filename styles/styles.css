@@ -691,6 +691,7 @@ footer {
 .submit:hover, 
 .submit:focus {
     background-color: #188CE8;
+    cursor: pointer;
 }
 
 .submit-text {
@@ -868,6 +869,7 @@ footer {
 
 .close-icon {
     fill: #000000;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-modal-close {
@@ -881,12 +883,13 @@ footer {
 
     background-color: #FFFFFF;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);    
 }
 
 .btn-modal-close:hover .close-icon,
 .btn-modal-close:focus .close-icon {
     fill: var(--brand-color);
+    cursor: pointer;
 }
 
 .modal-header {
@@ -922,7 +925,6 @@ footer {
 }
 
 .data-item {
-    display: block;
     width: 100%;
 
     height: 40px;
@@ -931,6 +933,8 @@ footer {
 
     margin-bottom: 10px;
     padding-left: 42px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .data-item:focus,
@@ -949,8 +953,11 @@ footer {
 
     top: 14px;
     left: 15px;
+    margin-top: -2px;
 
     fill: var(--brand-color-studio);   
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comments {
@@ -963,6 +970,8 @@ footer {
 
     padding: 12px 16px;
     margin-bottom: 20px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-area {
@@ -980,7 +989,7 @@ footer {
     align-items: flex-start;
 
     line-height: 1.17;
-    letter-spacing: 1%;
+    letter-spacing: 0.01em;
     color: var(--primery-text-color);
 }
 
@@ -994,11 +1003,14 @@ footer {
     border: 2px solid black;
     border-radius: 3px;
     margin-right: 7px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-agreement:checked+.checkbox-svg {
     background-color: var(--brand-color);
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .agreement-link {
@@ -1028,11 +1040,6 @@ footer {
 .send-form:hover,
 .send-form:focus {
     background-color: #188CE8;
+    cursor: pointer;
 }
 
-/* .send-text {
-    font-weight: 700px;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-} */
