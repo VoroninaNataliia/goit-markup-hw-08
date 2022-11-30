@@ -879,8 +879,7 @@ footer {
     justify-content: center;
     align-items: center;
 
-    width: 30px;
-    height: 30px;
+    background-color: #FFFFFF;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -1022,4 +1021,18 @@ footer {
     color: var(--additional-text-color);
     background-color: var(--brand-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.send-form:hover,
+.send-form:focus {
+    background-color: #188CE8;
+}
+
+/* .send-text {
+    font-weight: 700px;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+} */
