@@ -1,0 +1,32 @@
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+
+ul,
+ol {
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+  background-color: var(--main-background-color);
+}
+
+a,
+.body-nomaker-ul ul {
+  list-style: none;
+  text-decoration: none;
+}

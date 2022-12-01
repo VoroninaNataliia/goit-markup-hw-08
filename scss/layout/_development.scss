@@ -1,0 +1,42 @@
+.section.development {
+  padding-top: 0px;
+}
+
+.development-title {
+  margin-bottom: 50px;
+}
+
+.developmentsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.developmentsList__item {
+  position: relative;
+  width: 370px;
+}
+
+.developmentsList__box {
+  position: absolute;
+  bottom: 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.developmentsList__info {
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.17;
+
+  color: #ffffff;
+  text-transform: uppercase;
+}
