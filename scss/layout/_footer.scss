@@ -9,18 +9,6 @@ footer {
   padding: 60px 0px;
 }
 
-.links-footer-addres {
-  color: var(--additional-text-color);
-}
-
-.links-footer-contact {
-  font-style: normal;
-  line-height: 1.71;
-  color: rgba(255, 255, 255, 0.6);
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .footerContacts {
   display: flex;
   flex-direction: column;
@@ -28,8 +16,8 @@ footer {
   margin-right: 93px;
 }
 
-.logo-footer {
-  margin-bottom: 20px;
+.adressList__linkAdress {
+  color: var(--additional-text-color);
 }
 
 .adress {
@@ -37,30 +25,30 @@ footer {
   font-style: normal;
 }
 
+.adressList__linkContacts {
+  font-style: normal;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+  }
+}
+
+.navigationList {
+  display: flex;
+  align-items: center;
+}
+
 .adressList__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.footer {
-  display: flex;
-  align-items: baseline;
-
-  padding: 60px 0px;
-}
-
 .footerSocial {
   margin-right: auto;
-}
-
-.socialList__svg-footer {
-  fill: var(--brand-color-footer);
-}
-
-.socialList__link--footer {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.socialList__link--footer:focus {
-  outline: transparent;
 }
 
 .footerSocial__invitation {
@@ -71,4 +59,15 @@ footer {
   color: #ffffff;
 
   margin-bottom: 20px;
+}
+
+.socialList__link--footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  &:focus {
+    outline: transparent;
+  }
+}
+
+.socialList__svg--footer {
+  fill: var(--brand-color-footer);
 }

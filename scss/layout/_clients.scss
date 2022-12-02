@@ -26,8 +26,8 @@
     border: 1px solid var(--brand-color);
     outline: transparent;
 
-    &.clientsList__svg,
-    &.clientsList__svg {
+    & .clientsList__svg,
+    & .clientsList__svg {
       fill: var(--brand-color);
     }
   }

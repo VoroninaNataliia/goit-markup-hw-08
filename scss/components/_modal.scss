@@ -21,11 +21,13 @@
 }
 
 .btn-modal-close {
+  @include flexRowC;
   position: absolute;
   top: 8px;
   right: 8px;
 
-  @include flexRowC;
+  width: 30px;
+  height: 30px;
 
   background-color: #ffffff;
   border-radius: 50%;

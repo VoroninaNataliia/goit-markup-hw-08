@@ -1,0 +1,28 @@
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--brand-color-footer);
+}
+
+.logo__brandColor {
+  color: var(--brand-color);
+}
+
+.logo__studioHeader {
+  color: var(--brand-color-studio);
+}
+
+.logo-studio-footer {
+  color: var(--brand-color-footer);
+}
+
+.logo-header {
+  padding: 24px 0px 25px 0px;
+  margin-right: 93px;
+}
+
+.logo--footer {
+  margin-bottom: 20px;
+}
