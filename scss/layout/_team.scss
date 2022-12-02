@@ -3,14 +3,12 @@
 }
 
 .teamList {
-  display: flex;
-  flex-wrap: wrap;
+  @include flexWrap;
   gap: 30px;
 
   width: 1200px;
   padding: 0px 15px;
-  margin-left: auto;
-  margin-right: auto;
+  @include autoMarginX;
 }
 
 .teamList__item {
@@ -25,8 +23,7 @@
 }
 
 .teamList__box {
-  display: flex;
-  flex-direction: column;
+  @include flexColumn;
   align-items: center;
   flex-grow: 1;
 

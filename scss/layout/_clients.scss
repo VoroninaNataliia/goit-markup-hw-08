@@ -7,25 +7,30 @@
 }
 
 .clientsList__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexRowC;
 }
 
 .clientsList__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexRowC;
 
   width: 170px;
   height: 92px;
-
+  padding: 16px 32px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
-  padding: 16px 32px;
-
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--brand-color);
+    outline: transparent;
+
+    &.clientsList__svg,
+    &.clientsList__svg {
+      fill: var(--brand-color);
+    }
+  }
 }
 
 .clientsList__svg {
@@ -35,15 +40,4 @@
   fill: #afb1b8;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clientsList__link:hover .clientsList__svg,
-.clientsList__link:focus .clientsList__svg {
-  fill: var(--brand-color);
-}
-
-.clientsList__link:hover,
-.clientsList__link:focus {
-  border: 1px solid var(--brand-color);
-  outline: transparent;
 }

@@ -62,8 +62,8 @@ a,
 
 .container {
   width: 1200px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   padding: 0px 15px;
 }
 
@@ -118,10 +118,15 @@ a,
   color: var(--brand-color);
 }
 
+.navigationList {
+  display: flex;
+  align-items: center;
+}
+
 .navigationList__link--current {
-  position: relative;
   display: flex;
   flex-direction: column;
+  position: relative;
   color: var(--brand-color);
 }
 
@@ -145,6 +150,16 @@ a,
   margin-right: 50px;
 }
 
+.filterList__item:hover,
+.filterList__item:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.filterList__item:hover .contactsList__svg, .filterList__item:hover .contactsList__svg,
+.filterList__item:focus .contactsList__svg,
+.filterList__item:focus .contactsList__svg {
+  fill: var(--brand-color);
+}
+
 .contactsList__link {
   display: flex;
   font-weight: 500;
@@ -155,14 +170,10 @@ a,
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filterList__item:hover,
-.filterList__item:focus {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
 .contactsList {
   display: flex;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .contactsList__item:not(:last-child) {
@@ -174,40 +185,6 @@ a,
   margin-bottom: auto;
   margin-right: 10px;
   fill: var(--primery-text-color);
-}
-
-.contactsList__link:hover .contactsList__svg,
-.contactsList__link:focus .contactsList__svg {
-  fill: var(--brand-color);
-}
-
-.modalOrder {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
-  background-color: #ffffff;
-  border-radius: 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.btn-modal-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.closeSvg {
-  fill: #000000;
 }
 
 .socialList {
@@ -500,8 +477,8 @@ a,
 
 .sendForm {
   display: block;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   padding: 10px 52px;
   border-radius: 4px;
   border: none;
@@ -510,9 +487,7 @@ a,
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.sendForm:hover,
-.sendForm:focus {
+.sendForm:hover, .sendForm:focus {
   background-color: #188ce8;
   cursor: pointer;
 }
@@ -552,11 +527,11 @@ a,
   margin-right: auto;
   max-width: 696px;
   margin-bottom: 30px;
+  text-align: center;
   text-transform: uppercase;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--additional-text-color);
 }
@@ -574,17 +549,15 @@ a,
   color: #ffffff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.hero__button:hover,
-.hero__button:focus {
+.hero__button:hover, .hero__button:focus {
   cursor: pointer;
   background-color: #188ce8;
 }
 
 .advantagesList {
   display: flex;
-  align-content: center;
   flex-wrap: wrap;
+  align-content: center;
   gap: 30px;
 }
 
@@ -598,9 +571,9 @@ a,
   align-items: center;
   width: 270px;
   height: 120px;
-  background-color: #f5f4fa;
-  border-radius: 4px;
   margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: #f5f4fa;
 }
 
 .advantagesList__svg {
@@ -640,11 +613,11 @@ a,
 }
 
 .developmentsList__box {
-  position: absolute;
-  bottom: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 0px;
   width: 370px;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
@@ -722,10 +695,17 @@ a,
   align-items: center;
   width: 170px;
   height: 92px;
+  padding: 16px 32px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  padding: 16px 32px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clientsList__link:hover, .clientsList__link:focus {
+  border: 1px solid var(--brand-color);
+  outline: transparent;
+}
+.clientsList__link:hover.clientsList__svg, .clientsList__link:hover.clientsList__svg, .clientsList__link:focus.clientsList__svg, .clientsList__link:focus.clientsList__svg {
+  fill: var(--brand-color);
 }
 
 .clientsList__svg {
@@ -733,17 +713,6 @@ a,
   height: 60px;
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clientsList__link:hover .clientsList__svg,
-.clientsList__link:focus .clientsList__svg {
-  fill: var(--brand-color);
-}
-
-.clientsList__link:hover,
-.clientsList__link:focus {
-  border: 1px solid var(--brand-color);
-  outline: transparent;
 }
 
 footer {
@@ -821,20 +790,13 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  display: flex;
 }
 
 .projectList {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
-}
-
-.projectList__link:hover,
-.projectList__link:focus {
-  outline: transparent;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projectList__item {
@@ -847,6 +809,13 @@ footer {
   height: 100%;
   background-color: var(--main-background-color);
   color: var(--main-text-color);
+}
+.projectList__link:hover, .projectList__link:focus {
+  outline: transparent;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.projectList__link:hover .projectList__discription, .projectList__link:hover .projectList__discription, .projectList__link:focus .projectList__discription, .projectList__link:focus .projectList__discription {
+  transform: translateY(0px);
 }
 
 .projectList__thumb {
@@ -862,15 +831,10 @@ footer {
   padding: 64px 32px;
   transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(33, 150, 243, 0.9);
   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
-  background-color: rgba(33, 150, 243, 0.9);
-}
-
-.projectList__link:hover .projectList__discription,
-.projectList__link:focus .projectList__discription {
-  transform: translateY(0px);
 }
 
 .projectList__info {

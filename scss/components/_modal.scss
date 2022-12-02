@@ -25,9 +25,7 @@
   top: 8px;
   right: 8px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexRowC;
 
   background-color: #ffffff;
   border-radius: 50%;
@@ -50,8 +48,7 @@
 }
 
 .dataForm {
-  display: flex;
-  flex-direction: column;
+  @include flexColumn;
   align-items: flex-start;
 }
 
@@ -125,8 +122,7 @@
 }
 
 .checkbox {
-  margin-left: auto;
-  margin-right: auto;
+  @include autoMarginX;
 
   margin-bottom: 30px;
 }
@@ -174,8 +170,7 @@
 
 .sendForm {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
+  @include autoMarginX;
 
   padding: 10px 52px;
   border-radius: 4px;
@@ -185,10 +180,10 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.sendForm:hover,
-.sendForm:focus {
-  background-color: #188ce8;
-  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    cursor: pointer;
+  }
 }

@@ -1,8 +1,6 @@
 .container {
   width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-
+  @include autoMarginX;
   padding: 0px 15px;
 }
 

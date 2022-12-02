@@ -1,24 +1,22 @@
 .advantagesList {
-  display: flex;
+  @include flexWrap;
   align-content: center;
-  flex-wrap: wrap;
   gap: 30px;
 }
+
 .advantagesList__item {
   width: 270px;
 }
 
 .advantagesList__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexRowC;
 
   width: 270px;
   height: 120px;
-  background-color: #f5f4fa;
+  margin-bottom: 30px;
   border-radius: 4px;
 
-  margin-bottom: 30px;
+  background-color: #f5f4fa;
 }
 
 .advantagesList__svg {

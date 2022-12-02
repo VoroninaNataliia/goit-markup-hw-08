@@ -326,9 +326,7 @@ img {
   top: 8px;
   right: 8px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexRowC;
 
   width: 30px;
   height: 30px;
@@ -353,9 +351,7 @@ img {
 }
 
 .advantagesList__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexRowC;
 
   width: 270px;
   height: 120px;
@@ -395,7 +391,7 @@ img {
 
 .developmentsList {
   display: flex;
-  flex-wrap: wrap;
+flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -408,9 +404,7 @@ img {
   position: absolute;
   bottom: 0px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexRowC;
 
   width: 370px;
   height: 70px;
@@ -435,7 +429,7 @@ img {
 
 .teamList {
   display: flex;
-  flex-wrap: wrap;
+flex-wrap: wrap;
   gap: 30px;
 
   width: 1200px;
@@ -486,18 +480,14 @@ img {
 }
 
 .socialList__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexRowC;
 }
 .socialList__item:not(:last-child) {
   margin-right: 10px;
 }
 
 .socialList__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexRowC;
 
   width: 44px;
   height: 44px;
@@ -541,15 +531,11 @@ img {
 }
 
 .clientsList__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexRowC;
 }
 
 .clientsList__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexRowC;
 
   width: 170px;
   height: 92px;
@@ -879,9 +865,7 @@ footer {
   top: 8px;
   right: 8px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexRowC;
 
   background-color: #ffffff;
   border-radius: 50%;
