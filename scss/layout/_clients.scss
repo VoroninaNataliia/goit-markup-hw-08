@@ -1,9 +1,18 @@
 .clientsList {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 
-  flex-basis: calc((100% - 5 * 30px) / 6);
+  flex-basis: calc((100% - 1 * 30px) / 2);
+
+  @include tablet {
+    flex-basis: calc((100% - 2 * 30px) / 3);
+  }
+
+  @include desktop {
+    flex-basis: calc((100% - 5 * 30px) / 6);
+  }
 }
 
 .clientsList__item {
@@ -13,9 +22,9 @@
 .clientsList__link {
   @include flexRowC;
 
-  width: 170px;
+  width: 210px;
   height: 92px;
-  padding: 16px 32px;
+  padding: 16px 52px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
@@ -31,6 +40,19 @@
       fill: var(--brand-color);
     }
   }
+  @include tablet {
+    width: 226px;
+    padding: 16px 60px;
+  }
+
+  @include desktop {
+    width: 170px;
+    padding: 16px 32px;
+  }
+}
+
+.clientsList__item {
+  @include flexRowC;
 }
 
 .clientsList__svg {

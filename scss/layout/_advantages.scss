@@ -5,18 +5,34 @@
 }
 
 .advantagesList__item {
-  width: 270px;
+  width: 450px;
+
+  @include tablet {
+    width: 354px;
+  }
+
+  @include desktop {
+    width: 270px;
+  }
 }
 
 .advantagesList__icon {
   @include flexRowC;
 
-  width: 270px;
+  width: 450px;
   height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;
 
   background-color: #f5f4fa;
+
+  @include tablet {
+    width: 354px;
+  }
+
+  @include desktop {
+    width: 270px;
+  }
 }
 
 .advantagesList__svg {
@@ -25,11 +41,16 @@
 }
 
 .advantagesList__title {
+  text-align: center;
   margin-bottom: 10px;
 
   font-size: 14px;
   text-transform: uppercase;
   line-height: 1.14;
+
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .advantagesList__description {

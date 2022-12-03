@@ -1,9 +1,10 @@
 .section.development {
   padding-top: 0px;
-}
+  display: none;
 
-.development-title {
-  margin-bottom: 50px;
+  @include desktop {
+    display: block;
+  }
 }
 
 .developmentsList {

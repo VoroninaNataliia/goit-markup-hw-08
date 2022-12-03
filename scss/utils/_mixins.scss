@@ -1,3 +1,5 @@
+/*flex featurs*/
+
 @mixin flexRowC {
   display: flex;
   justify-content: center;
@@ -14,7 +16,37 @@
   flex-wrap: wrap;
 }
 
+/*for positionasing*/
+
 @mixin autoMarginX {
   margin-left: auto;
   margin-right: auto;
+}
+
+/*sizes of viewports*/
+
+@mixin mobile {
+  @media screen and(min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and(min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and(min-width: 1200px) {
+    @content;
+  }
+}
+
+// general settings for img
+
+@mixin propertiesImg {
+  display: block;
+  max-width: 100%;
+  height: 100%;
 }
