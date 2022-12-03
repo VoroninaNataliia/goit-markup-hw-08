@@ -259,17 +259,31 @@ a,
 
 .submitForm {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .submitForm {
+    flex-direction: row;
+  }
 }
 
 .submitForm__input {
-  width: 358px;
+  width: 450px;
   min-height: 50px;
+  margin-bottom: 20px;
   padding-left: 15px;
-  margin-right: 12px;
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .submitForm__input {
+    width: 358px;
+    margin-bottom: 0px;
+    margin-right: 12px;
+  }
 }
 .submitForm__input:focus {
   outline: transparent;
@@ -278,10 +292,10 @@ a,
 
 .submit {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 200px;
   padding-top: 10px;
-  padding-right: 28px;
-  padding-left: 28px;
   padding-bottom: 10px;
   background-color: var(--brand-color);
   border-radius: 4px;
@@ -540,15 +554,30 @@ a,
 }
 
 .hero {
-  max-width: 1600px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
-  padding: 200px 0px;
+  padding: 118px 0px;
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/office.png);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   background-repeat: no-repeat;
   background-position: center;
   background-color: #2f303a;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    padding: 200px 0px;
+  }
+}
+
+.hero__image {
+  position: absolute;
 }
 
 .hero__title {
@@ -715,9 +744,24 @@ a,
 }
 
 .teamList__item {
+  width: 450px;
   border-radius: 0px 0px 4px 4px;
   background-color: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 768px) {
+  .teamList__item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .teamList__item {
+    width: 270px;
+  }
+}
+
+.teamList__img {
+  display: block;
 }
 
 .teamList__box {
@@ -816,14 +860,47 @@ footer {
 
 .footer {
   display: flex;
-  align-items: baseline;
-  padding: 60px 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 15px;
 }
-
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
 .footerContacts {
   display: flex;
   flex-direction: column;
-  margin-right: 93px;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footerContacts {
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footerContacts {
+    align-items: flex-start;
+    margin-right: 93px;
+    padding-bottom: 0px;
+  }
+}
+
+.adressList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .adressList {
+    align-items: baseline;
+  }
 }
 
 .adressList__linkAdress {
@@ -855,16 +932,32 @@ footer {
 }
 
 .footerSocial {
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footerSocial {
+    align-items: flex-start;
+    padding-bottom: 0px;
+    margin-right: auto;
+  }
 }
 
 .footerSocial__invitation {
+  text-align: center;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.17;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .footerSocial__invitation {
+    text-align: start;
+  }
 }
 
 .socialList__link--footer {

@@ -20,7 +20,7 @@
 
   <body class="body-nomaker-ul">
     <!--header-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="header-container container">
         <a href="./index.html" class="logo-header logo"
           ><span class="logo__brandColor" lang="en">Web</span
@@ -58,16 +58,30 @@
           </li>
         </ul>
       </div>
-    </header> -->
+    </header>
 
     <main>
       <!--hero section-->
-      <!-- <section class="hero">
+      <section class="hero heroPosition">
+        <img
+          class="hero__image"
+          srcset="
+            ./images/hero/office480@1x.jpg   480w,
+            ./images/hero/office480@2x.jpg   960w,
+            ./images/hero/office768@1x.jpg   768w,
+            ./images/hero/office768@2x.jpg  1536w,
+            ./images/hero/office1200@1x.jpg 1200w,
+            ./images/hero/office1200@2x.jpg 2400w
+          "
+          sizes="(min-width: 1200px) 1200px, (min-width: 768px) 768px, (min-width: 480px) 480px, 100vw"
+          src=""
+          alt="наша команда в офісі"
+        />
         <div class="container">
           <h1 class="hero__title">ефективні рішення для вашого бізнесу</h1>
           <button data-modal-open type="button" class="hero__button">Замовити послугу</button>
         </div>
-      </section> -->
+      </section>
       <!--advantages section-->
       <section class="section">
         <div class="container">

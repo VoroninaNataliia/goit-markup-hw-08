@@ -1,23 +1,23 @@
-@import './scss/utils/variables';
-@import './scss/utils/mixins';
-@import './scss/utils/hidden';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/hidden';
 
-@import './scss/base/common';
-@import './scss/base/containers';
-@import './scss/base/styles';
+@import './base/common';
+@import './base/containers';
+@import './base/styles';
 
-@import './scss/components/logo';
-@import './scss/components/components';
-@import './scss/components/social';
-@import './scss/components/backdrop';
-@import './scss/components/modal';
+@import './components/logo';
+@import './components/components';
+@import './components/social';
+@import './components/backdrop';
+@import './components/modal';
 
-@import './scss/layout/header';
-@import './scss/layout/hero';
-@import './scss/layout/advantages';
-@import './scss/layout/development';
-@import './scss/layout/team';
-@import './scss/layout/clients';
-@import './scss/layout/footer';
+@import './layout/header';
+@import './layout/hero';
+@import './layout/advantages';
+@import './layout/development';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/footer';
 
-@import './scss/layout/portfolio';
+@import './layout/portfolio';

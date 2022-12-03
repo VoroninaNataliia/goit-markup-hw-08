@@ -1,15 +1,27 @@
 .hero {
-  max-width: 1600px;
+  max-width: 480px;
   @include autoMarginX;
-  padding: 200px 0px;
+  padding: 118px 0px;
 
   text-align: center;
 
-  background-image: linear-gradient(rgba(47, 48, 58, 40%), rgba(47, 48, 58, 40%)),
-    url(../images/office.png);
+  background-image: linear-gradient(rgba(47, 48, 58, 40%), rgba(47, 48, 58, 40%));
   background-repeat: no-repeat;
   background-position: center;
   background-color: #2f303a;
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1600px;
+    padding: 200px 0px;
+  }
+}
+
+.hero__image {
+  position: absolute;
 }
 
 .hero__title {
