@@ -3,8 +3,7 @@ footer {
 }
 
 .footer {
-  display: flex;
-  flex-direction: column;
+  @include flexColumn;
   align-items: center;
   justify-content: space-around;
 
@@ -21,8 +20,7 @@ footer {
 }
 
 .footerContacts {
-  display: flex;
-  flex-direction: column;
+  @include flexColumn;
   align-items: center;
   justify-content: space-between;
 
@@ -41,8 +39,7 @@ footer {
 }
 
 .adressList {
-  display: flex;
-  flex-direction: column;
+  @include flexColumn;
   align-items: center;
 
   @include desktop {

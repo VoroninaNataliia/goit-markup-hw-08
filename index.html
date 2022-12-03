@@ -62,24 +62,12 @@
 
     <main>
       <!--hero section-->
-      <section class="hero heroPosition">
-        <img
-          class="hero__image"
-          srcset="
-            ./images/hero/office480@1x.jpg   480w,
-            ./images/hero/office480@2x.jpg   960w,
-            ./images/hero/office768@1x.jpg   768w,
-            ./images/hero/office768@2x.jpg  1536w,
-            ./images/hero/office1200@1x.jpg 1200w,
-            ./images/hero/office1200@2x.jpg 2400w
-          "
-          sizes="(min-width: 1200px) 1200px, (min-width: 768px) 768px, (min-width: 480px) 480px, 100vw"
-          src=""
-          alt="наша команда в офісі"
-        />
-        <div class="container">
+      <section class="hero">
+        <div class="hero__box">
           <h1 class="hero__title">ефективні рішення для вашого бізнесу</h1>
-          <button data-modal-open type="button" class="hero__button">Замовити послугу</button>
+          <button data-modal-open type="button" class="submit">
+            <span class="hero__btn">Замовити послугу</span>
+          </button>
         </div>
       </section>
       <!--advantages section-->
@@ -535,7 +523,7 @@
     </footer>
 
     <!-- MODAL WINDOW -->
-    <!-- <div data-modal class="backdrop is-hidden">
+    <div data-modal class="backdrop is-hidden">
       <div class="modalOrder">
         <button data-modal-close class="btn-modal-close">
           <svg class="closeSvg" width="30" height="30">
@@ -606,7 +594,7 @@
           </button>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <script src="./js/modal.js"></script>
   </body>

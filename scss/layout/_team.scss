@@ -4,6 +4,7 @@
 
 .teamList {
   @include flexWrap;
+  justify-content: center;
   gap: 30px;
 
   width: 480px;
