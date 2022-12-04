@@ -1,17 +1,17 @@
 .clientsList {
-  display: flex;
-  flex-wrap: wrap;
+  @include flexWrap;
   justify-content: center;
   gap: 30px;
 
-  flex-basis: calc((100% - 1 * 30px) / 2);
+  min-width: 480px;
 
   @include tablet {
+    max-width: 768px;
     flex-basis: calc((100% - 2 * 30px) / 3);
   }
 
   @include desktop {
-    flex-basis: calc((100% - 5 * 30px) / 6);
+    max-width: 1200px;
   }
 }
 

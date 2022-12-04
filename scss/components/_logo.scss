@@ -19,8 +19,14 @@
 }
 
 .logo-header {
+  display: block;
   padding: 24px 0px 25px 0px;
-  margin-right: 93px;
+
+  @include tablet {
+  }
+  @include desktop {
+    margin-right: 93px;
+  }
 }
 
 .logo--footer {

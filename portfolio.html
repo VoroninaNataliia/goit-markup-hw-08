@@ -21,7 +21,7 @@
   <body class="body-nomaker-ul">
     <!--header-->
     <header class="header">
-      <div class="header-container container">
+      <div class="headerContainer container">
         <a href="./index.html" class="logo-header logo"
           ><span class="logo__brandColor" lang="en">Web</span
           ><span class="logo__studioHeader" lang="en">Studio</span></a
@@ -57,6 +57,16 @@
             >
           </li>
         </ul>
+        <!-- <div class="menu"> -->
+        <button
+          class="menuSmartphone headerContainer__menuSmartphone--marginY js-open-menu"
+          type="button"
+        >
+          <svg>
+            <use href="./images/icons.svg#icon-menu" class=".menuSmartphone__svg"></use>
+          </svg>
+        </button>
+        <!-- </div> -->
       </div>
     </header>
 
@@ -239,12 +249,12 @@
     <footer>
       <div class="container footer">
         <div class="footerContacts">
-          <a href="./index.html" class="logo--footer logo"
+          <a href="./index.html" class="logo logo--footer"
             ><span class="logo__brandColor" lang="en">Web</span
             ><span class="logo-studio-footer" lang="en">Studio</span></a
           >
           <address class="adress">
-            <ul>
+            <ul class="adressList">
               <li class="adressList__item">
                 <a href="https://goo.gl/maps/y8DyPwEEGnDpnCMR8" class="adressList__linkAdress"
                   >м. Київ, пр-т Лесі Українки, 26</a

@@ -1,19 +1,64 @@
-// site-navigation
-
-.navigation {
-  display: flex;
-  margin-right: 318px;
+// button close
+.closeSvg {
+  fill: #000000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.btnModalClose {
+  @include flexRowC;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btnModalClose:hover .closeSvg,
+.btnModalClose:focus .closeSvg {
+  fill: var(--brand-color);
+  cursor: pointer;
+}
+
+.btnModalClose--mobile {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  border: none;
+}
+
+// site-navigation
+.navigation {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
 .navigationList {
   display: flex;
   align-items: center;
+
+  @include desktop {
+    margin-right: 318px;
+  }
+}
+
+.navigationList__item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .navigationList__link {
   display: inline-block;
 
-  padding: 32px 0px;
+  padding-top: 32px;
+  padding-left: 0px;
+  padding-bottom: 32px;
+  padding-left: 0px;
 
   font-weight: 500;
   line-height: 1.14;
@@ -49,69 +94,40 @@
   background-color: var(--brand-color);
 }
 
-.navigationList {
-  display: flex;
-  align-items: center;
-}
+// company's contacts
+.contactsList {
+  display: none;
 
-.navigationList__item:not(:last-child) {
-  margin-right: 50px;
-}
-
-// projects filter
-
-.filterList {
-  display: flex;
-  justify-content: center;
-
-  margin-bottom: 50px;
-}
-
-.filterList__item {
-  margin-right: 8px;
-
-  &:last-child {
-    margin-right: 8px;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    // padding: 21px 0px 21px 8px;
   }
 
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
+  @include desktop {
+    flex-direction: row;
+    padding: 30px 0px 30px 0px;
+    @include autoMarginX;
+  }
+}
 
-    & .contactsList__svg,
-    & .contactsList__svg {
-      fill: var(--brand-color);
+.contactsList__item {
+  @include tablet {
+    margin-bottom: 10px;
+  }
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  @include desktop {
+    margin-right: 30px;
+    margin-bottom: 0px;
+    &:last-child {
+      margin-right: 0px;
     }
   }
 }
-
-.filterList__button {
-  padding: 6px 22px;
-  border-radius: 4px;
-  border: none;
-
-  font-weight: 500;
-  line-height: 1.63;
-  letter-spacing: 0.03em;
-  background-color: #f5f4fa;
-  color: var(--main-text-color);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    background-color: var(--brand-color);
-    color: #ffffff;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-  }
-}
-
-// company's contacts
 
 .contactsList__link {
   display: flex;
@@ -120,23 +136,17 @@
   letter-spacing: 0.02em;
   color: var(--primery-text-color);
 
-  padding: 30px 0px;
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
     color: var(--brand-color);
   }
-}
 
-.contactsList {
-  display: flex;
-  @include autoMarginX;
-}
-
-.contactsList__item:not(:last-child) {
-  margin-right: 30px;
+  &:hover .contactsList__svg,
+  &:focus .contactsList__svg {
+    fill: var(--brand-color);
+  }
 }
 
 .contactsList__svg {
@@ -218,4 +228,90 @@
 
   margin-left: 10px;
   fill: var(--additional-text-color);
+}
+
+// projects filter
+
+.filterList {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+
+.filterList__item {
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 8px;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+
+    & .contactsList__svg,
+    & .contactsList__svg {
+      fill: var(--brand-color);
+    }
+  }
+}
+
+.filterList__button {
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: none;
+
+  font-weight: 500;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  background-color: #f5f4fa;
+  color: var(--main-text-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: var(--brand-color);
+    color: #ffffff;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// button for smartphone menu
+.menuSmartphone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  background-color: transparent;
+
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.headerContainer__menuSmartphone--marginY {
+  margin-top: auto;
+  margin-bottom: auto;
+
+  margin-left: auto;
+}
+
+.menuSmartphone__svg {
+  fill: #212121;
+  width: 40px;
+  height: 40px;
 }

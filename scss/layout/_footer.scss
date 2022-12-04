@@ -1,5 +1,14 @@
 footer {
+  min-width: 480px;
   background-color: var(--footer-background-color);
+
+  @include tablet {
+    min-width: 768px;
+  }
+
+  @include desktop {
+    width: 100%;
+  }
 }
 
 .footer {
@@ -13,9 +22,6 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: baseline;
-  }
-
-  @include desktop {
   }
 }
 

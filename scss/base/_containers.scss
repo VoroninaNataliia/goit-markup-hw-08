@@ -1,15 +1,19 @@
 .container {
   width: 480px;
   @include autoMarginX;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0px;
+  padding-left: 0px;
 
   @include tablet {
-    width: 768px;
+    min-width: 768px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 
   @include desktop {
-    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    min-width: 1200px;
   }
 }
 
