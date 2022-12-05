@@ -1,14 +1,5 @@
 footer {
-  min-width: 480px;
   background-color: var(--footer-background-color);
-
-  @include tablet {
-    min-width: 768px;
-  }
-
-  @include desktop {
-    width: 100%;
-  }
 }
 
 .footer {
@@ -123,4 +114,16 @@ footer {
 
 .socialList__svg--footer {
   fill: var(--brand-color-footer);
+}
+
+.footerSubmit {
+  width: 100%;
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 570px;
+  }
 }

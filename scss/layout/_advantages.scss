@@ -5,6 +5,7 @@
   gap: 30px;
 
   width: 480px;
+  max-width: 100%;
 
   @include tablet {
     width: 780px;
@@ -17,6 +18,7 @@
 
 .advantagesList__item {
   width: 450px;
+  max-width: 100%;
 
   @include tablet {
     width: 354px;
@@ -31,6 +33,7 @@
   @include flexRowC;
 
   width: 450px;
+  max-width: 100%;
   height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;

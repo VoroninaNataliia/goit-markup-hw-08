@@ -1,8 +1,4 @@
 // button close
-.closeSvg {
-  fill: #000000;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .btnModalClose {
   @include flexRowC;
@@ -22,6 +18,11 @@
 .btnModalClose:focus .closeSvg {
   fill: var(--brand-color);
   cursor: pointer;
+}
+
+.closeSvg {
+  fill: #000000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btnModalClose--mobile {
@@ -103,7 +104,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    // padding: 21px 0px 21px 8px;
   }
 
   @include desktop {
@@ -164,12 +164,35 @@
   flex-direction: column;
   align-items: center;
 
+  width: 480px;
+  width: 100%;
+
+  @include tablet {
+    // width: 768px;
+  }
+
   @include desktop {
     flex-direction: row;
   }
 }
+
+.submitForm__label {
+  display: block;
+  width: 480px;
+  width: 100%;
+
+  @include tablet {
+    width: 450px;
+  }
+
+  @include desktop {
+    width: 358px;
+  }
+}
 .submitForm__input {
-  width: 450px;
+  display: block;
+  width: 100%;
+
   min-height: 50px;
   margin-bottom: 20px;
   padding-left: 15px;
@@ -180,8 +203,12 @@
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  @include tablet {
+    // min-width: 450px;
+  }
+
   @include desktop {
-    width: 358px;
+    // width: 358px;
     margin-bottom: 0px;
     margin-right: 12px;
   }
@@ -197,9 +224,12 @@
   justify-content: center;
   align-items: center;
   width: 200px;
+  max-width: 100%;
 
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 28px;
+  padding-right: 28px;
 
   background-color: var(--brand-color);
   border-radius: 4px;
