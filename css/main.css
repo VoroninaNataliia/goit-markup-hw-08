@@ -595,7 +595,7 @@ a,
 
 .dataForm__comments {
   resize: none;
-  width: 370px;
+  width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -622,9 +622,6 @@ a,
 
 .checkbox__wrapper {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   font-size: 12px;
   line-height: 1.17;
   color: var(--primery-text-color);
@@ -685,8 +682,8 @@ a,
   flex-direction: column;
   top: 0;
   left: 0;
-  min-width: 480px;
-  min-height: 796px;
+  width: 100%;
+  height: 100%;
   padding: 48px 40px;
   background-color: #ffffff;
   z-index: 2;
@@ -781,8 +778,7 @@ a,
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 480px;
-  max-width: 100%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 118px 0px;
