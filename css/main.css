@@ -680,6 +680,7 @@ a,
   position: fixed;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   top: 0;
   left: 0;
   width: 100%;
@@ -705,10 +706,6 @@ a,
   align-items: flex-start;
 }
 
-.navListMobile--margin {
-  margin-bottom: 302px;
-}
-
 .navListMobile__link {
   display: block;
   padding-bottom: 32px;
@@ -721,13 +718,19 @@ a,
   color: var(--brand-color);
 }
 
+.navListMobile__link--current {
+  color: var(--brand-color);
+}
+
+.contactSocial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .contactsListMobile {
   display: flex;
   flex-direction: column;
-}
-
-.contactsListMobile--margin {
-  margin-bottom: 64px;
 }
 
 .contactsListMobile__link {
