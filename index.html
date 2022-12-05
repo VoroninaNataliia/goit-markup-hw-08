@@ -345,7 +345,6 @@
           <li class="teamList__item">
             <img
               class="teamList__img"
-              class="teamList__img"
               srcset="
                 ./images/team/employee480-4@1x.jpg  450w,
                 ./images/team/employee480-4@2x.jpg  900w,
@@ -614,33 +613,38 @@
         </svg>
       </button>
 
-      <ul class="navigationList navigationList--mobile">
-        <li class="navigationList__item">
-          <a href="./index.html" class="navigationList__link">Студія</a>
+      <ul class="navListMobile navListMobile--margin">
+        <li class="navListMobile__item">
+          <a href="./index.html" class="navListMobile__link">Студія</a>
         </li>
-        <li class="navigationList__item">
-          <a href="./portfolio.html" class="navigationList__link">Портфоліо</a>
+        <li class="navListMobile__item">
+          <a href="./portfolio.html" class="navListMobile__link">Портфоліо</a>
         </li>
-        <li class="navigationList__item">
-          <a href="./index.html" class="navigationList__link">Контакти</a>
+        <li class="navListMobile__item">
+          <a href="./index.html" class="navListMobile__link">Контакти</a>
         </li>
       </ul>
 
-      <ul class="contactsList">
-        <li class="contactsList__item">
-          <a href="mailto:info@devstudio.com" class="contactsList__link"
-            ><svg width="16" height="12" class="contactsList__svg">
-              <use href="./images/icons.svg#icon-mail" class="contacts-icon"></use></svg
-            >info@devstudio.com</a
-          >
-        </li>
-        <li class="contactsList__item">
-          <a href="tel:+380961111111" class="contactsList__link">
-            <svg width="10" height="16" class="contactsList__svg">
-              <use href="./images/icons.svg#icon-smartphone" class="contacts-icon"></use></svg
+      <ul class="contactsListMobile contactsListMobile--margin">
+        <li class="contactsListMobile__item">
+          <a href="tel:+380961111111" class="contactsListMobile__link contactsListMobile__link--tel"
             >+38 096 111 11 11</a
           >
         </li>
+        <li class="contactsListMobile__item">
+          <a
+            href="mailto:info@devstudio.com"
+            class="contactsListMobile__link contactsListMobile__link--mail"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="socialListMobile">
+        <li class="socialListMobile__item">Instagram</li>
+        <li class="socialListMobile__item">Twitter</li>
+        <li class="socialListMobile__item">Facebook</li>
+        <li class="socialListMobile__item">LinkedIn</li>
       </ul>
     </div>
 
